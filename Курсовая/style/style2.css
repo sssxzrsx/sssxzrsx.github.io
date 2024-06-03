@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 1920px;
+  max-height: 1080px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+input {
+  height: 45px;
+  width: 100%;
+  color: #385983;
+  font-size: 14px;
+  line-height: 16px;
+  border: 2px solid #e9f2ff;
+  border-radius: 5px;
+  padding-left: 25px;
+}
+
+main {
+  background: #f1f5fe;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input:focus {
+  border: 2px solid #c1d9fd;
+  outline: none;
+}
+
+.cricle {
+  position: absolute;
+  z-index: 1;
+  width: 2534px;
+  height: 2534px;
+  border-radius: 50%;
+  background: #f7faff;
+  box-shadow: 0px 4px 70px 6px rgba(217, 229, 255, 0.7);
+  animation-name: fadeCricle;
+  animation-duration: .7s;
+  animation-timing-function: easy-in-out;
+  animation-delay: .5s;
+  animation-iteration-count: 1s;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: forwards;
+}
+
+@keyframes fadeCricle {
+  0% {
+    width: 2534px;
+    height: 2534px;
+  }
+  25% {
+    width: 2000px;
+    height: 2000px;
+  }
+  50% {
+    width: 1500px;
+    height: 1500px;
+  }
+  75% {
+    width: 1000px;
+    height: 1000px;
+  }
+  100% {
+    width: 534px;
+    height: 534px;
+  }
+}
+
+.form-title {
+  color: #305070;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 38px;
+}
+
+.register-form-container {
+  opacity: 1;
+  position: relative;
+  z-index: 2;
+  background: #ffffff;
+  width: 100%;
+  max-width: 415px;
+  box-shadow: 0px 6px 50px rgba(217, 229, 255, 0.7);
+  border-radius: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 38px;
+  padding-bottom: 38px;
+  animation-name: fadeForm;
+  animation-duration: .7s;
+  animation-timing-function: easy-in-out;
+  animation-delay: 1.4s;
+  animation-iteration-count: 1s;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: forwards;
+}
+
+@keyframes fadeForm {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.form-field {
+  margin-bottom: 13px;
+}
+
+.button {
+  font-weight: bold;
+  font-size: 14px;
+  display: block;
+  height: 35px;
+  background: #247fff;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 45px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0d6cf2;
+}
+
+a.button {
+  text-decoration: none;
+}
+
+.button-google {
+  color: #fff;
+  background: #400470;
+  margin-bottom: 20px;
+}
+
+.button-google:hover {
+  background: #e9f2ff;
+  color: #400470;
+}
+
+.divider {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #405d87;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.modal {
+  background-color: #fafafa;
+  border: none;
+  text-align: center;
+  position: fixed;
+  border-radius: 10px;
+  max-width: 60%;
+  max-height: 40%;
+  width: 500px;
+  height: 250px;
+  transform: scale(.4);
+  transition: all .2s linear;
+  margin: auto;
+  padding: 40px;
+  line-height: 40px;
+}
+
+.modal p a {
+  padding: 10px 30px;
+  border: #400470 solid 1px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #400470;
+  border-radius: 6px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.modal p a:hover {
+  color:#400470;
+  background-color: #fff;
+}
+
+.modal:hover {
+  transform: scale(1);
+}
+
+.modal::backdrop {
+  background-color: #252525;
+  opacity: 0.8;
+}
+
+.modal__inner {
+  padding: 1em 2em;
+}
